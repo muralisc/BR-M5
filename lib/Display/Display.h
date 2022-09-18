@@ -3,8 +3,7 @@
 
 #include "M5StickCPlus.h"
 #include <Arduino.h>
-
-extern const unsigned char icon_ble[4608];
+#include "icon.c"
 
 class Display
 {

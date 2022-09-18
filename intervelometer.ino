@@ -1,3 +1,5 @@
+#pragma GCC diagnostic ignored "-Wnarrowing"
+
 #include "CanonBLERemote.h"
 #include <Arduino.h>
 #include "Ticker.h"
@@ -5,7 +7,6 @@
 #include "Display.h"
 #include "TimeLapse_Management.h"
 
-#define LOG_LOCAL_LEVEL ESP_LOG_INFO
 #include "esp_log.h"
 #include <esp32-hal-log.h>
 

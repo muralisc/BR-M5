@@ -1,7 +1,6 @@
 #include "Display.h"
 #include <Arduino.h>
 #include "M5StickCPlus.h"
-#include "icon.c"
 
 Display::Display(M5Display* tft, String name_remote):
     buffer(tft),

@@ -15,13 +15,7 @@
       "email": "maxmaczaa@gmail.com",
       "url": "https://magiapp.me",
       "maintainer": true 
-      },
-      {
-        "name": "Arthur Findelair",
-        "email": "arthfind@gmail.com",
-        "url": "https://arthurfindelair.com/",
-        "maintainer": true 
-      }
+      }    
     ],
     "frameworks": "arduino",
     "platforms": "esp32",

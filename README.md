@@ -11,10 +11,53 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 * Install [Visual Studio Code](https://code.visualstudio.com/download) and the [PlatformIO IDE](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) extension.
 * Clone this repository - ```git clone https://github.com/ArthurFDLR/br-m5``` -, open it as project in PlatformIO and upload - ```Ctrl+Alt+u``` - to a M5Stick-Cplus connected to your PC.
 
+### Linux Installation
+
+Download Arduio IDE zip from: https://www.arduino.cc/
+In the arduino ide add 'aditional boards' (Instructions in https://docs.m5stack.com/en/quick_start/m5stickc_plus/arduino )
+Add 'M5Stack' board and M5Stack library to Arduino IDE
+
+Install any aditional python packages using linux package manager
+e.g: serial
+```
+yay -S python-pyserial
+```
+
+#### No Permission to write to /dev/ttyUSB0
+Arduino might throw permission issue while uploading to M5Stick cplus
+
+Find the group using:
+```
+$ ls -l /dev/ttyUSB0
+crw-rw---- 1 root uucp 188, 0 Sep 18 17:46 /dev/ttyUSB0
+```
+
+Add your username to the group
+e.g
+```
+sudo usermod -a -G dialout <username>
+```
+
+#### Compiling in Arduino IDE
+
+Add libraries
+
+1. Lib1: https://github.com/rpolitex/ArduinoNvs
+1a Download zip from github
+1b Import in IDE using Sketch > import lib... > add lib...
+
+2. Lib2: https://github.com/ArthurFDLR/BR-M5
+2a. Copy all folders under /lib to ~/Arduino/libraries
+
 ## How-To-Use
 
+Youtube Tutorial: https://www.youtube.com/watch?v=ZZdTl0400uM
+
 * Power on by pressing the left-side button and power off with a 6 seconds press on the same button.
+* Keep pressing BtnA (The main button below screen) to activate the bluetooth pairing mode.
 * You can connect to your Canon DSLR as soon as the remote is powered on and displays *Pairing in progress*.
+* Once connected, to use the remote the camera need to be in the right 'shooting mode'
+  * Set to corret mode using: Menu > Camera > 4 > Drive Mode > remote icon
 * To change the interval, press the right-side button for half a second and use the same button to increase and the center button to decrease the timelapse interval. Once set, press the right-side button for half a second again.
 * Start and stop time-lapses using the center button. The remote takes single shots if the interval is set to 0 seconds.
 

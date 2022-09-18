@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include <BLEDevice.h>
 
-static const char *LOG_TAG = "BRM5_Security_Tag";
+static const char *LOG_TAG = "MySecurity";
 
 advdCallback::advdCallback(BLEUUID service_uuid, bool *ready_to_connect, BLEAddress *address_to_connect)
 {
