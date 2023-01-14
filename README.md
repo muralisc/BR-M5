@@ -14,6 +14,8 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 ### Linux Installation
 
 Download Arduio IDE zip from: https://www.arduino.cc/
+Unzip and run the ide:
+./arduino-ide
 In the arduino ide add 'aditional boards' (Instructions in https://docs.m5stack.com/en/quick_start/m5stickc_plus/arduino )
 Add 'M5Stack' board and M5Stack library to Arduino IDE
 
@@ -49,9 +51,14 @@ Add libraries
 2. Lib2: https://github.com/ArthurFDLR/BR-M5
 2a. Copy all folders under /lib to ~/Arduino/libraries
 
+3. Youtube Tutorial on connecting M5stick : https://www.youtube.com/watch?v=ZZdTl0400uM
+
+4. Create new sketchbook in arduino ide.
+    Sketch > Verity/Compile
+    Sketch > Upload
+
 ## How-To-Use
 
-Youtube Tutorial: https://www.youtube.com/watch?v=ZZdTl0400uM
 
 * Power on by pressing the left-side button and power off with a 6 seconds press on the same button.
 * Keep pressing BtnA (The main button below screen) to activate the bluetooth pairing mode.
